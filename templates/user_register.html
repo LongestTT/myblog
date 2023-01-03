@@ -1,0 +1,55 @@
+{# user_register.html文件 #}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="/static/css/reglogin.css" rel='stylesheet' type='text/css'/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://liucy.fun/static/media/18.jpg">
+    <title>Enlightened🥝</title>
+</head>
+<body>
+<div class="main">
+    <div class="header">
+        <h1>注册一个用户!</h1>
+    </div>
+    <p></p>
+    <form action="{% url 'user_register' %}" method="post">
+        {% csrf_token %}
+        <ul class="left-form">
+            <h2>注册:</h2>
+            {# 第一个表单 #}
+            <li>
+                <input type="text" placeholder="请输入您的邮箱" name="email"/>
+                <div class="clear"></div>
+            </li>
+{#             通过表单.字段.errors来显示表单中给定的错误信息, 这是个列表, 所以得.0#}
+
+            <div style="color: red">{{ register_form.email.errors.0 }}</div>
+            {# 第二个表单 #}
+            <li>
+                <input type="password" placeholder="请输入密码"
+                       name="password"/>
+                <div class="clear"></div>
+            </li>
+            <div style="color: red">{{ register_form.password.errors.0 }}
+            </div>
+            {# 第三个表单 #}
+            <li>
+                <input type="text" placeholder="请输入您的昵称"
+                       name="nick_name"/>
+                <div class="clear"></div>
+            </li>
+            <div style="color: red">{{ register_form.nick_name.errors.0 }}
+            </div>
+            <input type="submit" value="注册">
+            <div class="clear"></div>
+        </ul>
+        <div class="clear"></div>
+    </form>
+    {# 通过视图中传递的msg来展示错误提示 #}
+    <h3 style="width: 200px;height: 30px;margin: auto;color: red;text-align:
+center">{{ msg }}</h3>
+</div>
+</body>
+</html>

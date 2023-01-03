@@ -1,0 +1,93 @@
+*{
+    font-family: '华文中宋'
+}
+.block[data-fx="10"] a:hover::after,
+a.content__text-link[data-fx="10"]:hover::after {
+    animation: loop 0.5s infinite;
+}
+
+@keyframes loop {
+    0% {
+        transform-origin: 0% 50%;
+        transform: scale3d(0, 1, 1);
+    }
+    50% {
+        transform-origin: 0% 50%;
+        transform: scale3d(1, 1, 1);
+    }
+    51% {
+        transform-origin: 100% 50%;
+    }
+    100% {
+        transform-origin: 100% 50%;
+        transform: scale3d(0, 1, 1);
+    }
+}
+
+.hover-reveal {
+    position: fixed;
+    width: 200px;
+    height: 150px;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.hover-reveal__inner,
+.hover-reveal__img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.hover-reveal__deco {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #181314;
+}
+
+.hover-reveal__img {
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+@media screen and (min-width: 53em) {
+    .block {
+        align-items: flex-start;
+    }
+
+    .content {
+        position: relative;
+        /*display: grid;*/
+        /*grid-template-columns: repeat(3, 33.33%);*/
+        margin: 0 auto;
+        padding-top: 10vh;
+        max-width: 700px;
+        min-height: 100vh;
+        text-align: left;
+    }
+
+    /*.content__text {*/
+    /*    grid-column: span 3;*/
+    /*}*/
+}
+
+#Taaaaa {
+
+
+    position: absolute;
+    left: 32%;
+    top: 1.5%;
+    /*padding: 5px;*/
+
+
+}
+#Taaaaa > div > a{
+    padding: 20px;
+    font-size: 20px;
+    color: #00ffff;
+}

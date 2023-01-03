@@ -1,0 +1,89 @@
+.icon {
+    width: 12px;
+    display: block;
+    margin: 8px auto;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 70px;
+}
+
+main img {
+    width: 100px;
+    border-radius: 50%;
+    margin-top: 50px;
+    border: 2px solid #fff;
+    animation: liu 60s linear infinite;
+}
+
+main p {
+    margin-top: 8px;
+    margin-bottom: 0;
+    font-size: 15px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+p{
+    text-align: center;
+    font-size: 25px;
+}
+.info a {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color .1s;
+}
+
+
+
+.info span {
+    margin: 0px 1px;
+}
+
+.hanyu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    padding: 0;
+    margin-top: 10px;
+}
+
+@keyframes move {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: calc(100% - 30px);
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes liu {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (min-width: 560px) {
+    body {
+        width: 50%;
+        position: absolute;
+        left: 50%;
+        top: 100px;
+        transform: translateX(-50%);
+    }
+   
+   
+}

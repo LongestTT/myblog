@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    height: 0;
+    text-decoration: none;
+}
+.top {
+    width: 1920px;
+    height: 80px;
+    /*background-color: #000;*/
+
+}
+
+.login {
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    /*background-color: #fff;*/
+    right: 3%;
+    top: 1%;
+}
+
+.login > ul > a {
+
+    color: #fff;
+    list-style: none;
+
+}
+
+#top_ul_ul_a {
+    position: absolute;
+    left: 5%;
+    top: 3%;
+    font-size: 22px;
+}
+
+#top_ul_ul_a_a{
+    position: absolute;
+    left: 62%;
+    top: 3%;
+    font-size: 22px;
+}
+
+.top > div span {
+    color: #fff;
+    position: absolute;
+    left: 1.5%;
+    top: 2%;
+    font-size: 24px;
+}

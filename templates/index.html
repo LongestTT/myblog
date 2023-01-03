@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://liucy.fun/static/media/18.jpg">
+    <link rel="stylesheet" href="/static/css/clock.css">
+    <link rel="stylesheet" href="/static/css/head.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <title>Enlightened🥝</title>
+
+</head>
+<style>
+
+
+    .p_text {
+        position: absolute;
+        left: 40.5%;
+        top: 35%;
+        color: #fff;
+        font-size: 48px;
+        padding: 10px;
+    {#top: 45%;#}
+    }
+
+
+</style>
+<body>
+<div style=" width: 100%;height: 5000px;">
+    <div style=" width: 100%;height: 100%;background: url({{ Bing }}) no-repeat; position: fixed;  /*将图片固定，不随页面滚动*/"></div>
+
+
+    <div class="top">
+        {# 头部最上层 #}
+        <div>
+            <ul class="login">
+                {# 如果用户是登录则显示名字#}
+                {% if request.user.is_authenticated %}
+                    <ul id="top_ul_ul_a"><a href="javascript:;"
+                                            style="font-family: '华文中宋'">{{ request.user.nick_name }}</a></ul>
+                    <ul id="top_ul_ul_a_a"><a href="/user_register" style="font-family: '华文中宋'">退出</a>
+                    </ul>
+                    {# 如果未登录, 则显示登录或注册 #}
+                {% else %}
+                    <ul id="top_ul_ul_a"><a href="{% url 'user_login' %}" style="font-family: '华文中宋'">登录</a></ul>
+                    <ul id="top_ul_ul_a_a"><a href="{% url 'user_register' %}" style="font-family: '华文中宋'">注册</a></ul>
+                {% endif %}
+            </ul>
+            <div>
+
+            </div>
+            <span>Enlightened🥝</span>
+            <div class="content" id="Taaaaa" style="padding: 2px;width: 6000px;height: 400px;">
+                <div class="block" data-fx="5">
+                    <a class="block__link" data-img="https://liucy.fun/static/media/7.jpg">🏡首页</a>
+
+                    <a class="block__title" data-img="https://liucy.fun/static/media/1.jpg">📺bilibili</a>
+                    <a class="block__link" data-img="https://liucy.fun/static/media/9.jpg">🏫学校</a>
+                    <a class="block__link" data-img="https://liucy.fun/static/media/24.jpg">💳网站</a>
+                    <a class="block__link" data-img="https://liucy.fun/static/media/84.jpg">🥝个人</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1 class="p_text">Enlightened🥝</h1>
+    <div id="clock">
+        <h1>
+            <span class="text"></span>
+        </h1>
+    </div>
+    <div id="scroll-down">
+        <i class="fas fa-angle-down scroll-down-effects">
+            ::before
+        </i>
+
+    </div>
+</div>
+</body>
+<script src="/static/js/clock.js" type="text/JavaScript"></script>
+<script src="/static/js/Load/charming.min.js" type="text/JavaScript"></script>
+<script src="/static/js/Load/imagesloaded.pkgd.min.js" type="text/JavaScript"></script>
+<script src="/static/js/Load/TweenMax.min.js" type="text/JavaScript"></script>
+<script src="/static/js/Load/demo.js" type="text/JavaScript"></script>
+
+</html>
